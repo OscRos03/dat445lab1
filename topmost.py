@@ -14,14 +14,11 @@ except :
 else:
     text = open(sys.argv[2])
 
-
-
-def main(stopwords, text,n ):
+def main(stopwords, text, n):
     words=wordfreq.tokenize(text)
     stopWords=wordfreq.tokenize(stopwords)
     frequencies=wordfreq.countWords(words, stopWords)
     
     wordfreq.printTopMost(frequencies, n)
     
-
 main(stopwords, text,n)
